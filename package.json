@@ -1,0 +1,24 @@
+{
+  "name": "automationfun",
+  "version": "1.0.0",
+  "description": "LennarProject",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "e2e",
+    "test",
+    "cypress",
+    "automation",
+    "framework"
+  ],
+  "author": "hendyg",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.3.2"
+  },
+  "devDependencies": {
+    "cypress-v10-preserve-cookie": "^1.2.1"
+  }
+}
