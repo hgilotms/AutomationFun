@@ -41,6 +41,8 @@ In the terminal within VS Code, run the following command to open Cypress:
 
 This will open the Cypress Test Runner.
 
+The spec files are stored in a tab in the upper left hand corner of the Cypress Test Runner UI.
+
 In the Test Runner, click on the test file you want to run ( for example: lennar-home-schedule-a-tour.cy.js). Cypress will open a new browser window and run the tests.
 
 Notes
