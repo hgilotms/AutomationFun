@@ -6,25 +6,27 @@ This repository contains Cypress tests designed to automate the testing of the L
 Prerequisites
 Before running the tests, you need to set up the following:
 
-Ensure you have a stable internet connection 
+- Ensure you have a stable internet connection 
 
-Visual Studio Code: Download and install Visual Studio Code from the official website.
+- Visual Studio Code: Download and install Visual Studio Code from the official website.
 
-Node.js and npm: Ensure Node.js and npm are installed on your system. If not, download and install them from the official Node.js website.
+- Node.js and npm: Ensure Node.js and npm are installed on your system. If not, download and install them from the official Node.js website.
 
 
 Installing Cypress
 Follow these steps to install the Cypress automation framework:
 
-Open your terminal within Visual Studio Code (or command prompt or PowerShell).
+- Open your terminal within Visual Studio Code (or command prompt or PowerShell).
 
-Navigate to the project directory where you have cloned this repository.
+- Navigate to the project directory where you have cloned this repository.
 
 Run the following command to install Cypress:
 
-npm init (follow all prompts or skip through it by pressing enter)
-npm install
-npm install cypress --save-dev
+- npm init (follow all prompts or skip through it by pressing enter)
+
+- npm install
+   
+- npm install cypress --save-dev
 
 This will download and install Cypress locally within your project.
 
@@ -35,7 +37,8 @@ Open Visual Studio Code and navigate to the project directory.
 
 In the terminal within VS Code, run the following command to open Cypress:
 
-npx cypress open
+- npx cypress open
+
 This will open the Cypress Test Runner.
 
 In the Test Runner, click on the test file you want to run ( for example: lennar-home-schedule-a-tour.cy.js). Cypress will open a new browser window and run the tests.
