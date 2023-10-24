@@ -12,5 +12,6 @@ describe('Search for a  Move-in-Ready Home in Dallas, Texas', () => {
         cy.get('[data-testid="quickmoveinhomes"]').click()
         cy.get('[data-testid="show-results"]').click()
         cy.get('#search-result-list-homesite-2 > .InfoCard_wrapper__ZeC_J > .InfoCard_inner__t2t62 > .InfoCard_info__T9k_1').click()
+        cy.get('.Sidebar_sidebarWrapper__iXP02 > #sidebar > #homesite-status').should('have.text',' Move-in ready ')
     })
 });
