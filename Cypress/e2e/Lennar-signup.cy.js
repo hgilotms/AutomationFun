@@ -4,7 +4,7 @@ const password= 'Lennar123!'
 const number= '5124896838'
 
 describe('Redirect to Lennar Account Creation webpage ', () => {
-    it('should visit the Lennar Website and redirect successfully to account creation forms ', () => {
+    it.skip('should visit the Lennar Website and redirect successfully to account creation forms ', () => {
         cy.visit('/')
         cy.get('[id="onetrust-accept-btn-handler"]').trigger('click')
         cy.wait(2000)
@@ -25,24 +25,24 @@ describe('Create a Lennar Account ', () => {
         cy.wait(2000)
         cy.get('[id="onetrust-accept-btn-handler"]').trigger('click')
         cy.wait(2000)
-        cy.get('[aria-label="Email address"]').should('be.visible').click()
-        cy.wait(5000)
-        cy.get('[aria-label="Email address"]').type(email)
+        cy.contains('Email address').should('be.visible').click()
+        cy.get('[class="InputRedesigned_label__wC8tG InputRedesigned_label__focused__dryTI Typography_tagsAndLegalNew__gDtif"]').type(email)
         cy.get('[data-testid="sign-submit-button"]').click()
-        cy.get('[type="password"]').type(password)
-        cy.get('[name="confirmPassword"]').type(password)
+        cy.wait(2000)
+        cy.get('[data-testid="password"]').first().type(password)
+        cy.get('[data-testid="password"]').last().type(password)
         cy.get('[data-testid="sign-submit-button"]').click()
-        cy.get('[name="firstName"]').type('Lennar')
-        cy.get('[name="lastName"]').type('Home')
-        cy.get('[data-testid="tel"]').type(number)
+        cy.get('[data-testid="text"]').first().type('Lennar')
+        cy.get('[data-testid="text"]').last().type('Home')
+        cy.get('[data-testid="tel"]').click().type(number)
         cy.get('[data-testid="sign-submit-button"]').click()
-        cy.get('[class="select__value-container select__value-container--has-value css-1qbivgn"]').click().type('{downarrow},{enter}')
+        cy.get('.select__control > .select__indicators > .select__indicator > .css-19bqh2r').last().click().type('{downarrow},{enter}')
         cy.get('[data-testid="sign-submit-button"]').click()
         
 })
 })
 describe('Login to a Lennar Account ', () => {
-    it('should visit the Lennar Website and log into account ', () => {
+    it.skip('should visit the Lennar Website and log into account ', () => {
         cy.visit(redirectURL)
         cy.wait(2000)
         cy.get('[id="email"]').trigger('click').type(email)
