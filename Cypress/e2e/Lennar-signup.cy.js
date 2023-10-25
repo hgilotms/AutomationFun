@@ -4,7 +4,7 @@ const password= 'Lennar123!'
 const number= '5124896838'
 
 describe('Redirect to Lennar Account Creation webpage ', () => {
-    it.skip('should visit the Lennar Website and redirect successfully to account creation forms ', () => {
+    it('should visit the Lennar Website and redirect successfully to account creation forms ', () => {
         cy.visit('/')
         cy.get('[id="onetrust-accept-btn-handler"]').trigger('click')
         cy.wait(2000)
@@ -42,7 +42,7 @@ describe('Create a Lennar Account ', () => {
 })
 })
 describe('Login to a Lennar Account ', () => {
-    it.skip('should visit the Lennar Website and log into account ', () => {
+    it('should visit the Lennar Website and log into account ', () => {
         cy.visit(redirectURL)
         cy.wait(2000)
         cy.get('[id="email"]').trigger('click').type(email)
