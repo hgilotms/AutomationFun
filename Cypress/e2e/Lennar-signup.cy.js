@@ -8,7 +8,7 @@ describe('Redirect to Lennar Account Creation webpage ', () => {
         cy.visit('/')
         cy.get('[id="onetrust-accept-btn-handler"]').trigger('click')
         cy.wait(2000)
-        cy.get('[d="M21 21v-.923a4 4 0 00-4-4H9a4 4 0 00-4 4V21"]').click({ force: true })
+        cy.get('[data-testid="header-menu"]').first().click()
         cy.wait(1000)
         cy.get('[class="AuthMenuContent_authLink__lP2HC"]').click()
         cy.intercept('GET', 'https://stage.lennar.com/error*', (req) => {
